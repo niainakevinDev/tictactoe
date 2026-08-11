@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fanorona - Jeu de stratégie malgache</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>🎯 Fanorona</h1>
+      <p class="subtitle">Jeu de stratégie traditionnel de Madagascar</p>
+    </header>
+
+    <!-- Sélecteur de mode -->
+    <div class="mode-selector">
+      <button id="mode-telo" class="mode-btn active">
+        <span class="mode-icon">🔴🔴🔴</span>
+        <span class="mode-name">Fanoron-Telo</span>
+        <span class="mode-desc">3 pions par joueur</span>
+      </button>
+      <button id="mode-tsivy" class="mode-btn">
+        <span class="mode-icon">🔴🔴🔴🔴🔴</span>
+        <span class="mode-name">Fanoron-Tsivy</span>
+        <span class="mode-desc">22 pions par joueur</span>
+      </button>
+    </div>
+
+    <!-- Informations du jeu -->
+    <div class="game-info">
+      <div id="status">Tour : 🔴 Joueur 1</div>
+      <button id="reset-btn">🔄 Nouvelle partie</button>
+    </div>
+
+    <!-- Plateau Canvas -->
+    <div class="board-container">
+      <canvas id="gameCanvas" width="600" height="400"></canvas>
+    </div>
+
+    <!-- Zone des pions capturés -->
+    <div class="captured-area">
+      <div class="captured-pieces">
+        <span>⚫ Capturés : <span id="captured-black">0</span></span>
+        <span>⚪ Capturés : <span id="captured-white">0</span></span>
+      </div>
+    </div>
+
+    <!-- Légende des règles -->
+    <div class="rules">
+      <details>
+        <summary>📖 Règles du jeu</summary>
+        <div id="rules-content">
+          <p>Chargement des règles...</p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
